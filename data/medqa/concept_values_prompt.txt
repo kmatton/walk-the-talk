@@ -1,0 +1,94 @@
+Consider the following questions from the United States Medical Licensing Examination, which contains questions designed to assess a test taker's ability to apply clinical knowledge to patient management. Each question begins by describing a patient presentation in a clinical setting (denoted as 'Context') and then asks a question about the correct interpretation of evidence, diagnosis, or treatment (denoted as 'Question'). In addition, for each question, I've provided a list of 'Concepts', or high-level pieces of information, in the 'Context' that could possibly influence a test taker's answer to the 'Question'. I am interested in creating counterfactual versions of the questions, where the values of 'Concepts' in the 'Context' have changed. My goal in doing this is to estimate the effect of each 'Concept' on a test taker's answer choice. To help with this, your task is to: (A) determine what the current value of each concept is and (B) provide one to two possible alternative values for each concept.
+
+Here are three examples.
+
+Example 1
+Context: A 32-year-old woman with bipolar disorder visits her gynecologist because she believes she is pregnant. A urine pregnancy test is performed which confirms she is pregnant.  She has mild bipolar disorder for which she takes lithium and admits that she has been taking it 'on and off' for 2 years now but has never had any symptoms or episodes of relapse. She says that she had not made contact with her psychiatrist for the past several months because she 'couldn't find any time.'
+Question: Which of the following is the next best step in the management of this patient?
+Answer choices:
+A. Taper lithium and administer valproate
+B. Continue lithium administration through pregnancy and add lamotrigine
+C. Taper lithium and administer carbamazepine
+D. Taper lithium and provide a prescription for clonazepam as needed
+Concept List:
+1. The age of the patient
+2. The gender of the patient
+3. The mental health condition of the patient
+4. The patient's reason for the medical visit
+5. The results of the patient's pregnancy test
+6. The medication history of the patient
+7. The symptom history of the patient
+8. The patient's level of contact with a physician
+Concept Values:
+1. (A) 32 (B.1) 22 (B.2) 42
+2. (A) woman (B.1) man
+3. (A) bipolar disorder (B.1) depression
+4. (A) they believe they are pregnant (B.1) routine check-up
+5. (A) the test is positive (B.1) the test is negative
+6. (A) has been taking lithium 'on and off' for 2 years (B.1) has consistently been taking lithium for 2 years (B.2) has been taking quetiapine 'on and off' for 2 years
+7. (A) has never had any symptoms or episodes of relapse (B.1) has frequently had symptoms and episodes of relapse
+8. (A) no contact for the past several months (B.1) consistently in contact
+
+Example 2
+Context: A 22-year-old man is brought to the emergency department 10 minutes after falling down a flight of stairs. An x-ray of the right wrist shows a distal radius fracture. A rapidly acting intravenous anesthetic agent is administered, and closed reduction of the fracture is performed. Following the procedure, the patient reports palpitations and says that he experienced an “extremely vivid dream,” in which he felt disconnected from himself and his surroundings while under anesthesia. His pulse is 110/min and blood pressure is 140/90 mm Hg.
+Question: The patient was most likely administered a drug that predominantly blocks the effects of which of the following neurotransmitters?
+Answer choices:
+A. Glutamate
+B. Norepinephrine
+C. Endorphin
+D. Gamma-aminobutyric acid
+Concept List:
+1. The age of the patient
+2. The gender of the patient
+3. How quickly the patient is brought to the hospital
+4. The patient's reason for the medical visit
+5. The results of the patient's x-ray
+6. The type of anesthetic agent given to the patient 
+7. The procedure performed on the patient
+8. The patient's symptoms following the procedure
+9. The patient's vital signs following the procedure
+Concept Values:
+1. (A) 22 (B.1) 12 (B.2) 32
+2. (A) man (B.1) woman
+3. (A) 10 minutes (B.1) 10 hours
+4. (A) falling down a flight of stairs (B.1) slipping on ice
+5. (A) distal radius fracture (B.1) no abnormalities
+6. (A) a rapidly acting intravenous anesthetic agent (B.1) local anesthesia applied to the procedural site
+7. (A) closed reduction of the fracture (B.1) an open reduction and internal fixation (ORIF)
+8. (A) palpitations and an “extremely vivid dream”, in which the patient felt disconnected from themself and their surroundings (B.1) none
+9. (A) pulse 110/min blood pressure 140/90 mm Hg (B.1) pulse 80/min and blood pressure 119/70 mm Hg
+
+Example 3
+Context: A 65-year-old male comes to the physician because of increasing swelling of the legs and face over the past 2 months. He has a history of diastolic heart dysfunction. The liver and spleen are palpable 4 cm below the costal margin. On physical examination, both lower limbs show significant pitting edema extending above the knees and to the pelvic area. Laboratory studies show: Serum Cholesterol 350 mg/dL (<200 mg/dL) Triglycerides 290 mg/dL (35-160 mg/dL) Calcium 8 mg/dL Albumin 2.8 g/dL Urea nitrogen 54 mg/dL Creatinine 2.5 mg/dL Urine Blood 3+ Protein 4+ RBC 15-17/hpf WBC 1-2/hpf RBC casts Many. Echocardiography shows concentrically thickened ventricles with diastolic dysfunction. Skeletal survey shows no osteolytic lesions.
+Question: Which of the following best explains these findings?
+Answer choices:
+A. AL amyloidosis
+B. Smoldering multiple myeloma
+C. Symptomatic multiple myeloma
+D. Waldenstrom's macroglobulinemia
+Concept List:
+1. The age of the patient
+2. The sex of the patient
+3. The patient's reason for the medical visit
+4. The patient's cardiac health history
+5. The findings of the patient's physical examination
+6. The results of the patient's laboratory studies 
+7. The results of the patient's echocardiographic report
+8. The results of the patient's skeletal survey
+Concept Values:
+1. (A) 65 (B.1) 55 (B.2) 75
+2. (A) male (B.1) female
+3. (A) increasing swelling of the legs and face (B.1) a routine check-up
+4. (A) history of diastolic heart dysfunction (B.1) no history of heart failure
+5. (A) both lower limbs show significant pitting edema extending above the knees and to the pelvic area (B.1) no abnormalities are noted
+6. (A) Serum Cholesterol 350 mg/dL (<200 mg/dL) Triglycerides 290 mg/dL (35-160 mg/dL) Calcium 8 mg/dL Albumin 2.8 g/dL Urea nitrogen 54 mg/dL Creatinine 2.5 mg/dL Urine Blood 3+ Protein 4+ RBC 15-17/hpf WBC 1-2/hpf RBC casts Many (B.1) Serum Cholesterol 150 mg/dL (<200 mg/dL) Triglycerides 140 mg/dL (35-160 mg/dL) Calcium 9 mg/dL Albumin 4.8 g/dL Urea nitrogen 15 mg/dL Creatinine 1.0 mg/dL Urine Blood Negative Protein Negative RBC 0-2/hpf WBC 1-2/hpf RBC casts None
+7. (A) concentrically thickened ventricles with diastolic dysfunction (B.1) normal heart structure and function without any significant abnormalities
+8. (A) no osteolytic lesions (B.1) osteolytic lesions are present
+
+For part B, you should select alternative values that meet the following criteria:
+1. They should be plausible. E.g., in Example 3, it is plausible for someone to have a Serum cholesterol level of 150 mg/dL, but a value of 5000 mg/dL is not plausible.
+2. They should be distinct from the original value. When possible, you should select values that represent the opposite of the current value. For example, if the current lab results are normal, choose abnormal values. If the current label results are abnormal, choose normal values.
+
+Please fill out the 'Concept Values' for the fourth example, following the formatting of the previous examples. You should provide only a numbered list. Do not provide the 'Concept Values' header.
+
+Example 4

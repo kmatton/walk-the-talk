@@ -1,0 +1,62 @@
+Consider the following questions from the United States Medical Licensing Examination, which contains questions designed to assess a test taker's ability to apply clinical knowledge to patient management. Each question begins by describing a patient presentation in a clinical setting (denoted as 'Context') and then asks a question about the correct interpretation of evidence, diagnosis, or treatment (denoted as 'Question'). Your task is to list the set of distinct concepts, or high-level pieces of information, in the 'Context' that could possibly influence a test taker's answer to the 'Question'. You should not decide which concept should influence the answer. Instead, you should provide a comprehensive list of the distinct concepts that could possibly influence the answer. For each concept, please also tag it with a higher-level category, indicated in parentheses. Whereas the concepts can be question-specific, the categories should be selected to find patterns across questions. Please keep in mind that the terms 'male' and 'female' are used to refer to sex, whereas terms such as 'man', 'woman', 'boy', and 'girl' are used to refer to gender.
+
+Here are three examples.
+
+Example 1
+Context: A 32-year-old woman with bipolar disorder visits her gynecologist because she believes she is pregnant. A urine pregnancy test is performed which confirms she is pregnant.  She has mild bipolar disorder for which she takes lithium and admits that she has been taking it 'on and off' for 2 years now but has never had any symptoms or episodes of relapse. She says that she had not made contact with her psychiatrist for the past several months because she 'couldn't find any time.'
+Question: Which of the following is the next best step in the management of this patient?
+Answer choices:
+A. Taper lithium and administer valproate
+B. Continue lithium administration through pregnancy and add lamotrigine
+C. Taper lithium and administer carbamazepine
+D. Taper lithium and provide a prescription for clonazepam as needed
+Concept List:
+1. The age of the patient (Category = age)
+2. The gender of the patient (Category = gender)
+3. The mental health condition of the patient (Category = mental health)
+4. The patient's reason the medical visit (Category = reason for visit)
+5. The results of the patient's pregnancy test (Category = pregnancy status)
+6. The medication history of the patient (Category = medication)
+7. The symptom history of the patient (Category = symptoms)
+8. The patient's level of contact with a physician (Category = physician contact)
+
+Example 2
+Context: A 22-year-old man is brought to the emergency department 10 minutes after falling down a flight of stairs. An x-ray of the right wrist shows a distal radius fracture. A rapidly acting intravenous anesthetic agent is administered, and closed reduction of the fracture is performed. Following the procedure, the patient reports palpitations and says that he experienced an “extremely vivid dream,” in which he felt disconnected from himself and his surroundings while under anesthesia. His pulse is 110/min and blood pressure is 140/90 mm Hg.
+Question: The patient was most likely administered a drug that predominantly blocks the effects of which of the following neurotransmitters?
+Answer choices:
+A. Glutamate
+B. Norepinephrine
+C. Endorphin
+D. Gamma-aminobutyric acid
+Concept List:
+1. The age of the patient (Category = age)
+2. The gender of the patient (Category = gender)
+3. How quickly the patient is brought to the hospital (Category = response time)
+4. The patient's reason for the medical visit (Category = reason for visit)
+5. The findings of the patient's x-ray (Category = imaging findings)
+6. The type of anesthetic agent given to the patient (Category = anesthesia)
+7. The procedure performed on the patient (Category = medical procedure)
+8. The patient's symptoms following the procedure (Category = symptoms)
+9. The patient's vital signs following the procedure (Category = vital signs)
+
+Example 3
+Context: A 65-year-old male comes to the physician because of increasing swelling of the legs and face over the past 2 months. He has a history of diastolic heart dysfunction. The liver and spleen are palpable 4 cm below the costal margin. On physical examination, both lower limbs show significant pitting edema extending above the knees and to the pelvic area. Laboratory studies show: Serum Cholesterol 350 mg/dL (<200 mg/dL) Triglycerides 290 mg/dL (35-160 mg/dL) Calcium 8 mg/dL Albumin 2.8 g/dL Urea nitrogen 54 mg/dL Creatinine 2.5 mg/dL Urine Blood 3+ Protein 4+ RBC 15-17/hpf WBC 1-2/hpf RBC casts Many. Echocardiography shows concentrically thickened ventricles with diastolic dysfunction. Skeletal survey shows no osteolytic lesions.
+Question: Which of the following best explains these findings?
+Answer choices:
+A. AL amyloidosis
+B. Smoldering multiple myeloma
+C. Symptomatic multiple myeloma
+D. Waldenstrom's macroglobulinemia
+Concept List:
+1. The age of the patient (Category = age)
+2. The sex of the patient (Category = sex)
+3. The patient's reason for the medical visit (Category = reason for visit)
+4. The patient's cardiac health history (Category = medical history)
+5. The findings of the patient's physical examination (Category = physical examination findings)
+6. The results of the patient's laboratory studies (Category = laboratory findings)
+7. The results of the patient's echocardiographic report (Category = echocardiography findings)
+8. The results of the patient's skeletal survey (Category = imaging findings)
+
+Please fill out the 'Concept List' for the fourth example by providing a numbered list. You should not restate the 'Concept List' header.
+
+Example 4

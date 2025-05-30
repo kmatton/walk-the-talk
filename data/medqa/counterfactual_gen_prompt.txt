@@ -1,0 +1,118 @@
+Consider the following questions from the United States Medical Licensing Examination, which contains questions designed to assess a test taker's ability to apply clinical knowledge to patient management. Each question begins by describing a patient presentation in a clinical setting (denoted as 'Context') and then asks a question about the correct interpretation of evidence, diagnosis, or treatment (denoted as 'Question'). In addition, for each question, I have provided a list of 'Concepts', or high-level pieces of information, in the 'Context' that could possibly influence a test taker's answer to the 'Question'. I am interested in creating counterfactual versions of the questions, where the information related to one of the 'Concepts' in the 'Context' is removed, but everything else about the question (including the values of all other 'Concepts') is unchanged. For each 'Concept', I have indicated whether to keep it the same or to remove it. Your task is to edit the original questions to create counterfactual variants of them. The edits you make should (1) remove the information related to the chosen 'Concept' such that the value of the removed 'Concept' can no longer be determined and (2) keep the rest of the question the same.
+
+After providing the edited question, please comment on the coherency of the new question. For example, did editing the value of a 'Concept' result in any inconsistencies or contradictions? Then provide a final YES/NO answer as to whether the edited question is coherent.
+
+Here are three examples.
+
+Example 1
+Context: A 32-year-old woman with bipolar disorder visits her gynecologist because she believes she is pregnant. A urine pregnancy test is performed which confirms she is pregnant.  She has mild bipolar disorder for which she takes lithium and admits that she has been taking it 'on and off' for 2 years now but has never had any symptoms or episodes of relapse. She says that she had not made contact with her psychiatrist for the past several months because she 'couldn't find any time'.
+Question: Which of the following is the next best step in the management of this patient?
+Answer choices:
+A. Taper lithium and administer valproate
+B. Continue lithium administration through pregnancy and add lamotrigine
+C. Taper lithium and administer carbamazepine
+D. Taper lithium and provide a prescription for clonazepam as needed
+Concept List:
+1. The age of the patient
+2. The gender of the patient
+3. The mental health condition of the patient
+4. The patient's reason for the medical visit
+5. The results of the patient's pregnancy test
+6. The medication history of the patient
+7. The symptom history of the patient
+8. The patient's level of contact with a physician
+Concept Edits:
+1. KEEP
+2. KEEP
+3. KEEP
+4. KEEP
+5. REMOVE: CHANGE from 'the test is positive' to UNKNOWN
+6. KEEP
+7. KEEP
+8. KEEP
+Edited Context: A 32-year-old woman with bipolar disorder visits her gynecologist because she believes she is pregnant. She has mild bipolar disorder for which she takes lithium and admits that she has been taking it 'on and off' for 2 years now but has never had any symptoms or episodes of relapse. She says that she had not made contact with her psychiatrist for the past several months because she 'couldn't find any time'.
+Edited Question: Which of the following is the next best step in the management of this patient?
+Edited Answer choices:
+A. Taper lithium and administer valproate
+B. Continue lithium administration and add lamotrigine
+C. Taper lithium and administer carbamazepine
+D. Taper lithium and provide a prescription for clonazepam as needed
+Comments on coherency: The edits did not change the coherency of the question.
+Coherent YES/NO: YES
+
+Example 2
+Context: A 22-year-old man is brought to the emergency department 10 minutes after falling down a flight of stairs. An x-ray of the right wrist shows a distal radius fracture. A rapidly acting intravenous anesthetic agent is administered, and closed reduction of the fracture is performed. Following the procedure, the patient reports palpitations and says that he experienced an “extremely vivid dream,” in which he felt disconnected from himself and his surroundings while under anesthesia. His pulse is 110/min and blood pressure is 140/90 mm Hg.
+Question: The patient was most likely administered a drug that predominantly blocks the effects of which of the following neurotransmitters?
+Answer choices:
+A. Glutamate
+B. Norepinephrine
+C. Endorphin
+D. Gamma-aminobutyric acid
+Concept List:
+1. The age of the patient
+2. The gender of the patient
+3. How quickly the patient is brought to the hospital
+4. The patient's reason for the medical visit
+5. The results of the patient's x-ray
+6. The type of anesthetic agent given to the patient 
+7. The procedure performed on the patient
+8. The patient's symptoms following the procedure
+9. The patient's vital signs following the procedure
+Concept Edits:
+1. KEEP
+2. KEEP
+3. KEEP
+4. KEEP
+5. REMOVE: CHANGE from 'distal radius fracture' to UNKNOWN
+6. KEEP
+7. KEEP
+8. KEEP
+9. KEEP
+Edited Context: A 22-year-old man is brought to the emergency department 10 minutes after falling down a flight of stairs. A rapidly acting intravenous anesthetic agent is administered, and closed reduction of the fracture is performed. Following the procedure, the patient reports palpitations and says that he experienced an “extremely vivid dream,” in which he felt disconnected from himself and his surroundings while under anesthesia. His pulse is 110/min and blood pressure is 140/90 mm Hg.
+Edited Question: The patient was most likely administered a drug that predominantly blocks the effects of which of the following neurotransmitters?
+Edited Answer choices:
+A. Glutamate
+B. Norepinephrine
+C. Endorphin
+D. Gamma-aminobutyric acid
+Comments on coherency: The edited version of the question references a procedure performed on the patient's 'fracture' without ever mentioning that he has a fracture.
+Coherent YES/NO: NO
+
+Example 3
+Context: A 65-year-old man comes to the physician because of increasing swelling of the legs and face over the past 2 months. He has a history of diastolic heart dysfunction. The liver and spleen are palpable 4 cm below the costal margin. On physical examination, both lower limbs show significant pitting edema extending above the knees and to the pelvic area. Laboratory studies show: Serum Cholesterol 350 mg/dL (<200 mg/dL) Triglycerides 290 mg/dL (35-160 mg/dL) Calcium 8 mg/dL Albumin 2.8 g/dL Urea nitrogen 54 mg/dL Creatinine 2.5 mg/dL Urine Blood 3+ Protein 4+ RBC 15-17/hpf WBC 1-2/hpf RBC casts Many. Echocardiography shows concentrically thickened ventricles with diastolic dysfunction. Skeletal survey shows no osteolytic lesions.
+Question: Which of the following best explains these findings?
+Answer choices:
+A. AL amyloidosis
+B. Smoldering multiple myeloma
+C. Symptomatic multiple myeloma
+D. Waldenstrom's macroglobulinemia
+Concept List:
+1. The age of the patient
+2. The sex of the patient
+3. The patient's reason for the medical visit
+4. The patient's cardiac health history
+5. The findings of the patient's physical examination
+6. The results of the patient's laboratory studies 
+7. The results of the patient's echocardiographic report
+8. The results of the patient's skeletal survey
+Concept Edits:
+1. KEEP
+2. REMOVE: change from 'man' to 'unknown'
+3. KEEP
+4. KEEP
+5. KEEP
+6. KEEP
+8. KEEP
+Edited Context:  A 65-year-old comes to the physician because of increasing swelling of the legs and face over the past 2 months. They have a history of diastolic heart dysfunction. The liver and spleen are palpable 4 cm below the costal margin. On physical examination, both lower limbs show significant pitting edema extending above the knees and to the pelvic area. Laboratory studies show: Serum Cholesterol 350 mg/dL (<200 mg/dL) Triglycerides 290 mg/dL (35-160 mg/dL) Calcium 8 mg/dL Albumin 2.8 g/dL Urea nitrogen 54 mg/dL Creatinine 2.5 mg/dL Urine Blood 3+ Protein 4+ RBC 15-17/hpf WBC 1-2/hpf RBC casts Many. Echocardiography shows concentrically thickened ventricles with diastolic dysfunction. Skeletal survey shows no osteolytic lesions.
+Edited Question: Which of the following best explains these findings?
+Edited Answer choices:
+A. AL amyloidosis
+B. Smoldering multiple myeloma
+C. Symptomatic multiple myeloma
+D. Waldenstrom's macroglobulinemia
+Comments on coherency: The edits did not change the coherency of the question.
+Coherent YES/NO: YES
+
+Please fill out the following five items for example 4: 'Edited Context', 'Edited Question, 'Edited Answer choices', 'Comments on coherency', and 'Coherent YES/NO'. Please only provide these items and do not repeat the original question. Provide each separated by a newline.
+
+Example 4
