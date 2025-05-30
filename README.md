@@ -7,7 +7,7 @@ Katie Matton, Robert Ness, John Guttag, Emre Kıcıman
 
 To run the code, you will first need to install the dependencies in the ``requirements.txt`` file.
 
-Some of the steps below use the OpenAI and Anthropic APIs to query LLMs. To do this, you will need to create an account and provide your API key. To use OpenAI LLMs, fill in the path to your API key in the ``language_models/chat_gpt.py`` and ``language_models/completion_gpt.py`` files. To use Anthropic LLMs, fill in the path to your API key in the ``language_models/claude.py`` file.
+Our code uses the OpenAI and Anthropic APIs to query LLMs. To do this, you will need to create an account and provide your API key. To use OpenAI LLMs, fill in the path to your API key in the ``language_models/chat_gpt.py`` and ``language_models/completion_gpt.py`` files. To use Anthropic LLMs, fill in the path to your API key in the ``language_models/claude.py`` file.
 
 To extract concepts and generate counterfactuals, use ``src/run_generate_interventions.py``.
 
