@@ -16,10 +16,10 @@ Code for the other steps is coming soon!
 ### Data
 
 #### BBQ
-We use the variant of the BBQ dataset ([Parrish et al., ACL 2022](https://aclanthology.org/2022.findings-acl.165/)) introduced in ([Turpin et al., NeurIPS 2023](https://arxiv.org/abs/2305.04388)). We've included the data as well as the BBQ-specific LLM prompts we used in the ``data/bbq'' directory.
+We use the variant of the BBQ dataset ([Parrish et al., ACL 2022](https://aclanthology.org/2022.findings-acl.165/)) introduced in ([Turpin et al., NeurIPS 2023](https://arxiv.org/abs/2305.04388)). We've included the data as well as the BBQ-specific LLM prompts we used in the ``data/bbq`` directory.
 
 #### MedQA
-We use the MedQA dataset [(Jin et al., Applied Sciences 2021)](https://www.mdpi.com/2076-3417/11/14/6421). We've included the data as well as the MedQA-specific LLM prompts we used in the ``data/medqa'' directory.
+We use the MedQA dataset [(Jin et al., Applied Sciences 2021)](https://www.mdpi.com/2076-3417/11/14/6421). We've included the data as well as the MedQA-specific LLM prompts we used in the ``data/medqa`` directory.
 
 ### Examples
 
