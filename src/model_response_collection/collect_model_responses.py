@@ -70,14 +70,14 @@ class ResponseCollector:
             basic_prompt = self.dataset.format_prompt_basic(self.example_idx)
             # format prompt based on prompting strategy
             qa_prompt = self.dataset.format_prompt_qa(basic_prompt, self.prompt_strategy, idx=self.example_idx)
-            # get model output on intervened prompt
-            intervention_responses = self.language_model.generate_response(qa_prompt, n_completions=len(completions_to_get))
+            # get model output on original prompt
+            original_responses = self.language_model.generate_response(qa_prompt, n_completions=len(completions_to_get))
         except Exception as e:
             print(f"Failed to generate model response to original question for example {self.example_idx}: {e}")
             self.failures["original"] = completions_to_get
             return
         # get answers
-        for response_idx, response in enumerate(intervention_responses):
+        for response_idx, response in enumerate(original_responses):
             idx_name = completions_to_get[response_idx]
             try:
                 answer = self.dataset.extract_answer(response, self.prompt_strategy, self.example_idx)
