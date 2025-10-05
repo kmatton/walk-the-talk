@@ -11,7 +11,9 @@ Our code uses the OpenAI and Anthropic APIs to query LLMs. To do this, you will 
 
 To extract concepts and generate counterfactuals, use ``src/run_generate_interventions.py``.
 
-To collect model responses to both the original and counterfactual questions, use ``src/run_collect_model_responses.py``
+To collect model responses to both the original and counterfactual questions, use ``src/run_collect_model_responses.py``.
+
+To analye the model's explanations (to determine which concepts it implies influenced its answer choice), use ``src/run_determine_implied_concepts.py``.
 
 Code for the other steps is coming soon!
 

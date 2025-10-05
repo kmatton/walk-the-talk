@@ -1,3 +1,5 @@
+import re
+
 from my_datasets.bbq import BBQDataset
 from my_datasets.medqa import MedQADataset
 from language_models.chat_gpt import ChatGPT
@@ -65,6 +67,29 @@ def parse_llm_response_factor_settings(response):
             new_settings = [line.split('(B)')[1].strip()]
         factor_settings.append({"current_setting": current_setting, "new_settings": new_settings})
     return factor_settings
+
+
+def parse_llm_response_implied_concepts(response, n_concepts):
+    """
+    Parses the LLM response about which concepts are implied by the LLM's explanation.
+    Args:
+        response: response from the LLM
+        n_concepts: the number of concepts we expect the LLM to provide decisions for
+    Returns:
+        parsed_fds: a list of 1s and 0s indicating whether each concept is implied by the CoT explanation
+    """
+    # split based on presence of numbers followed by a period and a space
+    pattern = re.compile(r'\d+\.\s')
+    concept_decisions = pattern.split(response)[1:]
+    if len(concept_decisions) != n_concepts:
+        raise ValueError(f"Number of concept decisions does not match expected number of concepts. Expected {n_concepts}, got {len(concept_decisions)}. Full response was {response}.")
+    parsed_fds = []
+    for idx, concept_decision in enumerate(concept_decisions):
+        decision_bools = ["YES" in concept_decision, "NO" in concept_decision]
+        if sum(decision_bools) != 1:
+            raise ValueError(f"Concept decision {idx+1} does not match expected format. (Did not provide yes/no decision). Full response was {response}.")
+        parsed_fds.append(1 if "YES" in concept_decision else 0)
+    return parsed_fds, response
 
 
 ####################################################################################################

@@ -198,3 +198,11 @@ class MedQADataset(Dataset):
             pred = response[0] # for direct answer, just take the first token
         assert str(pred) in choices, f"Model did not output one of {choices} as answer."
         return pred
+
+    def get_answer_choices(self):
+        """
+        Returns the answer choices for a given question.
+        Returns:
+            answer_choices: the answer choices for the question
+        """
+        return ['A', 'B', 'C', 'D']
