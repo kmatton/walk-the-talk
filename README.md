@@ -9,13 +9,15 @@ To run the code, you will first need to install the dependencies in the ``requir
 
 Our code uses the OpenAI and Anthropic APIs to query LLMs. To do this, you will need to create an account and provide your API key. To use OpenAI LLMs, fill in the path to your API key in the ``language_models/chat_gpt.py`` and ``language_models/completion_gpt.py`` files. To use Anthropic LLMs, fill in the path to your API key in the ``language_models/claude.py`` file.
 
-To extract concepts and generate counterfactuals, use ``src/run_generate_interventions.py``.
+There are two key parts to our method: (1) collecting counterfactual data and (2) estimating faithfulness using the collected data. We have examples for how to run each step of our method in the ``notebooks`` directory.
 
-To collect model responses to both the original and counterfactual questions, use ``src/run_collect_model_responses.py``.
+For collecting counterfactual data, there are three parts:
+* To extract concepts and generate counterfactuals, use ``src/run_generate_interventions.py``.
+* To collect model responses to both the original and counterfactual questions, use ``src/run_collect_model_responses.py``.
+* To analyze the model's explanations (to determine which concepts it implies influenced its answer choice), use ``src/run_determine_implied_concepts.py``.
 
-To analye the model's explanations (to determine which concepts it implies influenced its answer choice), use ``src/run_determine_implied_concepts.py``.
+To estimate faithfulness, we carried out all steps in Jupyter notebooks. To replicate our faithfulness estimation results on the BBQ dataset, see ``notebooks/bbq_example.ipynb``. To replicate our faithfulness estimation results on the MedQA dataset, see ``notebooks/medqa_example.ipynb``. The relevant helper code is in the directories ``src/explanation_implied_effect_estimation``, ``src/causal_concept_effect_estimation``, and ``src/faithfulness_estimation``.
 
-Code for the other steps is coming soon!
 
 ### Data
 
